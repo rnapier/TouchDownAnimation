@@ -10,16 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var customButton: CustomDownButton!
+    @IBOutlet weak var normalButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        customButton.customAnimator = CustomAnimator()
+        normalButton.addGestureRecognizer(CustomAnimatorGestureRecognizer(customAnimator: CustomAnimator()))
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func pressed(_ sender: AnyObject) {
+        print("pressed")
     }
-
 
 }
 

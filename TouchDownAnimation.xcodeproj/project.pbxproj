@@ -12,6 +12,7 @@
 		FB13EEDC1D19799A00C612CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB13EEDA1D19799A00C612CE /* Main.storyboard */; };
 		FB13EEDE1D19799A00C612CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB13EEDD1D19799A00C612CE /* Assets.xcassets */; };
 		FB13EEE11D19799A00C612CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB13EEDF1D19799A00C612CE /* LaunchScreen.storyboard */; };
+		FB13EEE91D1979DB00C612CE /* CustomDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB13EEE81D1979DB00C612CE /* CustomDownButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		FB13EEDD1D19799A00C612CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB13EEE01D19799A00C612CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB13EEE21D19799A00C612CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB13EEE81D1979DB00C612CE /* CustomDownButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDownButton.swift; sourceTree = "<group>"; };
+		FB6DF0601D19ACF300A5F5C5 /* TouchDownAnimation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TouchDownAnimation-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +59,12 @@
 			children = (
 				FB13EED61D19799A00C612CE /* AppDelegate.swift */,
 				FB13EED81D19799A00C612CE /* ViewController.swift */,
+				FB13EEE81D1979DB00C612CE /* CustomDownButton.swift */,
 				FB13EEDA1D19799A00C612CE /* Main.storyboard */,
 				FB13EEDD1D19799A00C612CE /* Assets.xcassets */,
 				FB13EEDF1D19799A00C612CE /* LaunchScreen.storyboard */,
 				FB13EEE21D19799A00C612CE /* Info.plist */,
+				FB6DF0601D19ACF300A5F5C5 /* TouchDownAnimation-Bridging-Header.h */,
 			);
 			path = TouchDownAnimation;
 			sourceTree = "<group>";
@@ -98,6 +103,7 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = J374TBL6J6;
 						DevelopmentTeamName = "Rob Napier";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -140,6 +146,7 @@
 			files = (
 				FB13EED91D19799A00C612CE /* ViewController.swift in Sources */,
 				FB13EED71D19799A00C612CE /* AppDelegate.swift in Sources */,
+				FB13EEE91D1979DB00C612CE /* CustomDownButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,10 +263,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TouchDownAnimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.robnapier.TouchDownAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TouchDownAnimation/TouchDownAnimation-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -268,10 +278,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TouchDownAnimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.robnapier.TouchDownAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TouchDownAnimation/TouchDownAnimation-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -295,6 +307,7 @@
 				FB13EEE71D19799A00C612CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
